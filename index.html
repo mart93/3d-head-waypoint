@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Header Transitions with plugin waypoint</title>
+
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+
+	</head>
+	<body>
+
+	<header id="ha-header" class="ha-header ha-header-large">
+		<div class="ha-header-perspective">
+			<div class="ha-header-front">
+				<nav>
+					<a>Lorm ipsum dolor sit amet.</a>
+					<a>Lorenook</a>
+					<a>Loriappe</a>
+					<a>Lorifluous</a>
+					<a>Lorwhile</a>
+					<a>Lorure</a>
+					<a>Lorndipity</a>
+					<a>Lor</a>
+				</nav>
+			</div>
+			<div class="ha-header-bottom">
+				<nav>
+					<a>Lorm ipsum dolor sit amet.</a>
+					<a>Lorenook</a>
+					<a>Loriappe</a>
+					<a>Lorifluous</a>
+					<a>Lorwhile</a>
+					<a>Lorure</a>
+					<a>Lorndipity</a>
+					<a>Lor</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section class="ha-waypoint" data-animate-Down-Scroll="ha-header-rotateBack" data-animate-Up-Scroll="ha-header-rotate">
+		<h1>.ha-waypoint</h1>
+		numquam, nostrum, tenetur tempora voluptas illo non perspiciatis! Officia velit ducimus eum optio. Perferendis quae, sed autem voluptate, necessitatibus excepturi aliquam? Blanditiis veritatis dolores, corporis ad voluptas asperiores iste voluptatem suscipit itaque reprehenderit consequuntur nesciunt saepe beatae, quas voluptatibus perferendis labore? Suscipit, libero? Aut commodi sint debitis eveniet totam necessitatibus assumenda similique reiciendis tempora tempore, cupiditate quae excepturi. Hic quibusdam odit iusto cupiditate soluta id magnam voluptatibus unde, obcaecati voluptas laboriosam neque natus dolores, dolore consequatur fuga facere, laudantium alias delectus nulla libero tempore eveniet perspiciatis ratione corporis numquam adipisci unde. Provident iste et maiores eligendi harum saepe alias odit doloremque consequatur sint placeat numquam nisi perspiciatis, iure voluptates quo non maxime incidunt accusamus odio impedit doloribus, nam cumque? Ipsa pariatur delectus, quibusdam repudiandae animi. Distinctio esse dolores, beatae incidunt, vel quasi in ullam alias deleniti accusamus quia earum quibusdam reiciendis debitis tempore optio amet minima placeat ipsum aut rem laborum dicta cupiditate assumenda cumque? Distinctio illum tempora iure officiis eaque corporis nemo fugit quis accusantium ducimus, velit, cupiditate excepturi quam sequi! Deserunt accusamus quaerat sunt pariatur, quia ipsa, ducimus alias eum? Unde in minus veritatis dolores officiis impedit culpa provident accusamus accusantium distinctio maiores, excepturi sequi commodi aliquam dignissimos alias iste consequatur. Veniam dignissimos repellendus eum quis, placeat sequi sapiente dolore incidunt atque dolorem, velit corporis cupiditate est commodi non hic reprehenderit blanditiis quas? Magni et, excepturi aliquid illo earum laboriosam sapiente doloremque in atque dolores, explicabo ipsum sed cumque sint tenetur ducimus ad ipsam unde, a molestias. Harum consequuntur perspiciatis minima aliquid labore fugiat quos ipsa. Molestias nihil nobis, ullam eveniet. Iusto, vitae facilis! Voluptate facilis illum numquam suscipit necessitatibus modi laudantium consequuntur molestias sed, temporibus at mollitia ullam nihil possimus consequatur. Voluptatem quisquam nulla magni asperiores rem, illum sed ipsa tenetur modi vel aperiam, tempore at veniam corporis vero dolorum debitis. Nesciunt, dolorem, sed. Veritatis, voluptatum maiores voluptas consectetur illo repudiandae modi facere nisi officia mollitia, earum cumque quae a quas dolor, quisquam totam magni neque minus numquam? Quis ea blanditiis iusto enim necessitatibus quas voluptate expedita voluptatem facilis itaque tenetur animi qui sit, nobis modi dolore ullam, mollitia odio numquam aperiam dolor quidem fugiat repudiandae. Illo eveniet culpa, atque eaque sunt magnam nobis iusto nostrum perferendis, quas dignissimos natus dolorem sit incidunt ipsum? Doloribus assumenda sed vero sequi tempore quis voluptate velit possimus laboriosam laudantium quia ipsum dolor debitis, fuga soluta qui necessitatibus in. Culpa et maxime, totam beatae id unde earum, architecto vero dicta rem numquam quisquam quos blanditiis sed aperiam mollitia consequatur voluptatum neque perferendis, dignissimos. Porro eum ad accusamus optio! Impedit incidunt id itaque in aut perferendis laboriosam quas aperiam, pariatur, cumque eum obcaecati excepturi asperiores illum sit provident doloremque, nam dignissimos quae, odio doloribus debitis accusantium. Ab, nisi blanditiis. Obcaecati ipsam commodi, repellat! Deserunt consequatur earum dignissimos nulla beatae porro, dolorem facilis maxime molestias quia eius quod officiis reprehenderit, natus accusantium praesentium ratione nihil error ex magni ut harum voluptas! Necessitatibus veniam, vitae, ipsa reiciendis perspiciatis nesciunt ratione neque nisi voluptas doloremque iure.</p>
+	</section>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script>
+
+			var $head = $( '#ha-header' ),
+				$el = $('.ha-waypoint'),
+				$animClassDown = $el.data( 'animateDownScroll' ),
+				$animClassUp = $el.data( 'animateUpScroll' );
+
+			$el.waypoint( function( W__point ) {
+				if( W__point === 'down' && $animClassDown ) {
+					$head.attr('class', 'ha-header ' + $animClassDown);
+					console.log($head.attr('class', 'ha-header ' + $animClassDown));
+				}
+				else if( W__point === 'up' && $animClassUp ){
+					$head.attr('class', 'ha-header ' + $animClassUp);
+					console.log($head.attr('class', 'ha-header ' + $animClassUp));
+				}
+			}, { offset: '0%' } );
+		
+	</script>
+	
+	</body>
+</html>
